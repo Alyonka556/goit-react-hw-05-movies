@@ -1,6 +1,8 @@
 import React from 'react';
 import { TrendingToday } from './TrendingToday';
 
-export const Home = () => {
-  return <TrendingToday></TrendingToday>;
+const Home = () => {
+  return <TrendingToday />;
 };
+
+export default Home;

@@ -10,6 +10,47 @@ export const fetchMoviesTrend = async () => {
       api_key: API_KEY,
     },
   });
-  console.log(data);
+  // console.log(data);
+  return data.results;
+};
+
+export const fetchMoviesId = async id => {
+  const { data } = await axios.get(`/movie/${id}`, {
+    params: {
+      api_key: API_KEY,
+    },
+  });
+  // console.log(data);
   return data;
+};
+
+export const fetchMoviesReviews = async id => {
+  const { data } = await axios.get(`/movie/${id}/reviews`, {
+    params: {
+      api_key: API_KEY,
+    },
+  });
+  // console.log(data);
+  return data.results;
+};
+
+export const fetchMoviesCast = async id => {
+  const { data } = await axios.get(`/movie/${id}/credits`, {
+    params: {
+      api_key: API_KEY,
+    },
+  });
+  // console.log(data);
+  return data.cast;
+};
+
+export const fetchMoviesBySearch = async inputValue => {
+  const { data } = await axios.get(`search/movie`, {
+    params: {
+      api_key: API_KEY,
+      query: inputValue,
+    },
+  });
+  // console.log(data);
+  return data.results;
 };
