@@ -72,8 +72,14 @@ const StyledMainContent = styled.div`
 `;
 
 const StyledFooter = styled.footer`
-  padding: 0 20px;
+  /* padding: 0 20px; */
   background-color: #476363;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
 `;
 
 // const StyledTitle = styled.h2`
