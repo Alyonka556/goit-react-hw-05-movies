@@ -16,7 +16,7 @@ const MovieDetails = () => {
   const navigate = useNavigate();
 
   const location = useLocation();
-  const goBackRef = useRef(location.state?.from || '/movies');
+  const goBackRef = useRef(location.state?.from ?? '/');
 
   const [movie] = useHttp(fetchMoviesId, movieId);
 

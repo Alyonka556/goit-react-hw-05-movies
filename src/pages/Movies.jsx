@@ -50,7 +50,11 @@ const Movie = () => {
   return (
     <>
       <StyledContainer>
-        <MovieSearch onSubmit={onSubmit} onChange={updateQueryString} />
+        <MovieSearch
+          onSubmit={onSubmit}
+          onChange={updateQueryString}
+          inputValue={inputValue}
+        />
         <StyledBox>
           <StyledList>
             {moviesData.map(movie => (

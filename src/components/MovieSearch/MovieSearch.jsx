@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const MovieSearch = ({ onSubmit, onChange }) => {
+export const MovieSearch = ({ onSubmit, onChange, inputValue }) => {
   return (
     <StyledSearchbar>
       <SearchForm onSubmit={onSubmit}>
@@ -11,6 +11,7 @@ export const MovieSearch = ({ onSubmit, onChange }) => {
           type="text"
           placeholder="Search movie"
           name="inputValue"
+          value={inputValue}
           onChange={onChange}
           required
         />
